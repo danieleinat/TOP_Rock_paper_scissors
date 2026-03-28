@@ -2,9 +2,9 @@ function playRound(computerScore,humanScore){
     let rock;
     let paper;
     let scissors;
-    rock > scissors 
-    scissors > paper
-    paper > rock
+    rock > scissors ;
+    scissors > paper;
+    paper > rock;
     if ( 1> computerScore > 0)
     console.log('rock')
     else if ( 1 < computerScore < 10)
