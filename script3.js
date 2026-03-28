@@ -9,12 +9,16 @@ function playRound(humanSelection, computerSelection) {
   humanScore = 0;
   computerScore = 0;
 }
+
+
+
+
 // humen's input
 function getHumanChoice() {
   humanSelection = prompt("ENTER YOUR CHOICE(Rock,Paper or Scissors): ");
   humanSelection = humanSelection.toLowerCase();
-  if (humanSelection === prompt) var humanSelection = humanSelection + 1;
-  return humanSelection;
+  if (humanSelection = prompt){ 
+  humanSelection = humanSelection + 1;
 }
 
 // computer input
@@ -34,7 +38,7 @@ const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 
 function playGame() {
-  playRound(5);
+  playRound(5)
 }
 
 playGame();
