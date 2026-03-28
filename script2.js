@@ -1,19 +1,36 @@
-function main(y){
-    if ( 1> y > 0)
+function playRound(computerScore,humanScore){
+    let rock;
+    let paper;
+    let scissors;
+    rock > scissors 
+    scissors > paper
+    paper > rock
+    if ( 1> computerScore > 0)
     console.log('rock')
-    else if ( 1 < y < 10)
+    else if ( 1 < computerScore < 10)
     console.log('paper')
     else
         console.log('scissors')
+    humanScore = 0
+   computerScore = 0
+    if (humanScore === Number)
+    var humanScore = humanScore+1;
+    if (computerScore === Number)
+    var computerScore = computerScore + 1;
+
+    console.log(humanScore,computerScore)
+}
+function getComputerChoice(){
+    return(Math.random());
     
 }
 
-
 function getHumanChoice(){
-    let x = prompt('enter a number here: ')
-    return(x);
+    let humanScore = prompt('enter a number here: ')
+    return(humanScore);
 }
 
-y = getHumanChoice()
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-main(y)
+playRound(humanSelection, computerSelection);
