@@ -1,14 +1,6 @@
-function playRound(humanSelection, computerSelection) {
-  "rock" > "scissors";
-  "scissors" > "paper";
-  "paper" > "rock";
-  humanScore = 0;
-  computerScore = 0;
-  if (humanSelection > computerSelection) console.log("YOU WIN");
-  else if (computerSelection > humanSelection) console.log("YOU LOSE");
-  else console.log("IT's A TIE");
+function playRound(humanChoice, computerChoice) {
+  // your code here!
 }
-
 // humen's input
 function getHumanChoice() {
   humanInput = prompt("enter your answer: ");
@@ -24,12 +16,8 @@ function getComputerChoice() {
   else console.log("scissors");
   return computerInput;
 }
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
 playRound(humanSelection, computerSelection);
-
-function playGame() {
-  playRound(5);
-}
-
-playGame();
