@@ -1,4 +1,4 @@
-function playRound(humanChoice, computerChoice) {
+function playRound(humanSelection, computerSelection) {
   // your code here!
   let rock;
   let paper;
@@ -11,20 +11,21 @@ function playRound(humanChoice, computerChoice) {
 }
 // humen's input
 function getHumanChoice() {
-  let humanScore = prompt("ENTER YOUR CHOICE(Rock,Paper or Scissors): ");
-  humanScore = humanScore.toLowerCase();
-  if (humanScore === prompt) var humanScore = humanScore + 1;
-  return humanScore;
+  humanSelection = prompt("ENTER YOUR CHOICE(Rock,Paper or Scissors): ");
+  humanSelection = humanSelection.toLowerCase();
+  if (humanSelection === prompt) var humanSelection = humanSelection + 1;
+  return humanSelection;
 }
 
 // computer input
 function getComputerChoice() {
-  computerScore = Math.random();
-  if (computerScore < 0.25) console.log("rock");
-  else if (0.5 < computerScore < 0.75) console.log("paper");
+  computerSelection = Math.random();
+  if (computerSelection < 0.25) console.log("rock");
+  else if (0.5 < computerSelection < 0.75) console.log("paper");
   else console.log("scissors");
-  if (computerScore === propmpt) var computerScore = computerScore + 1;
-  return computerScore;
+  if (computerSelection === Math.random())
+    var computerSelection = computerSelection + 1;
+  return computerSelection;
 }
 
 const humanSelection = getHumanChoice();
