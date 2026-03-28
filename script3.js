@@ -8,17 +8,16 @@ function playRound(humanSelection, computerSelection) {
   paper > rock;
   humanScore = 0;
   computerScore = 0;
+  if (humanSelection > computerSelection) console.log("YOU WIN");
+  else if (computerSelection > humanSelection) console.log("YOU LOSE");
+  else console.log("IT's A TIE");
 }
-
-
-
 
 // humen's input
 function getHumanChoice() {
-  humanSelection = prompt("ENTER YOUR CHOICE(Rock,Paper or Scissors): ");
+  humanSelection = prompt("ENTER YOUR CHOICE - Rock,Paper or Scissors: ");
   humanSelection = humanSelection.toLowerCase();
-  if (humanSelection = prompt){ 
-  humanSelection = humanSelection + 1;
+  if ((humanSelection = String)) humanSelection = humanSelection + 1;
 }
 
 // computer input
@@ -38,7 +37,7 @@ const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 
 function playGame() {
-  playRound(5)
+  playRound(5);
 }
 
 playGame();
