@@ -1,20 +1,31 @@
-function playRound(humanChoice, computerChoice) {
-  // your code here!
+function playRound(computerChoice, humanChoice) {
+  computerChoice = 0;
+  humanChoice = 0;
+  if (computerChoice > humanChoice) {
+    computerChoice += 1;
+    console.log(
+      humanChoice + "- you win " + "," + computerChoice + "- computer lose!",
+    );
+  } else {
+    computerChoice += 1;
+    console.log(`${computerChoice} computer win , humanChoice + lose`);
+  }
 }
 // humen's input
 function getHumanChoice() {
-  humanInput = prompt("enter your answer: ");
-  humanInput = humanInput.toLowerCase();
-  return humanInput;
+  humanChoice = prompt("enter your answer: ");
+  humanChoice = humanChoice.toLowerCase();
+  console.log(`you  have ${humanChoice}`);
+  return humanChoice;
 }
 
 // computer input
 function getComputerChoice() {
-  computerInput = Math.random();
-  if (computerInput < 0.25) console.log("rock");
-  else if (0.5 < computerInput < 0.75) console.log("paper");
-  else console.log("scissors");
-  return computerInput;
+  computerChoice = Math.random();
+  if (computerChoice < 0.25) console.log("rock");
+  else if (0.5 < computerChoice < 0.75) console.log("paper");
+  else console.log(`computer have ,${computerChoice}`);
+  return computerChoice;
 }
 
 const humanSelection = getHumanChoice();
