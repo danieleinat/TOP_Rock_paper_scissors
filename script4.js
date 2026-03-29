@@ -4,14 +4,18 @@ function playRound(computerChoice, humanChoice) {
   if (computerChoice > humanChoice) {
     computerChoice += 1;
     console.log(`${humanChoice} win , ${computerChoice} lose`);
-    console.log(`${computerChoice} + "computer win" , ${humanChoice} lose`);
+    console.log(`${computerChoice} win , ${humanChoice} lose`);
   } else if (humanChoice > computerChoice) {
     computerChoice += 1;
-    console.log(`${humanChoice} computer 'win' , ${computerChoice} + lose`);
+    console.log(`${humanChoice} win , ${computerChoice} + lose`);
   } else {
     ((computerChoice = computerChoice), (humanChoice = humanChoice));
+
+    console.log("it's a tie" + computerChoice, humanChoice);
+    return (computerChoice, humanChoice);
   }
 }
+
 // humen's input
 function getHumanChoice() {
   humanChoice = prompt("enter your answer: ");
@@ -22,10 +26,12 @@ function getHumanChoice() {
 
 // computer input
 function getComputerChoice() {
-  computerChoice = Math.random();
+  let computerChoice;
+  random = Math.random();
+  random == computerChoice;
   if (computerChoice < 0.25) console.log("rock");
   else if (0.5 < computerChoice < 0.75) console.log("paper");
-  else console.log(`computer has , ${computerChoice}`);
+  else console.log(`computer has , scissors`);
   return computerChoice;
 }
 
