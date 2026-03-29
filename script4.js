@@ -3,19 +3,20 @@ function playRound(computerChoice, humanChoice) {
   humanChoice = 0;
   if (computerChoice > humanChoice) {
     computerChoice += 1;
-    console.log(
-      humanChoice + "- you win " + "," + computerChoice + "- computer lose!",
-    );
-  } else {
+    console.log(`${humanChoice} win , ${computerChoice} lose`);
+    console.log(`${computerChoice} + "computer win" , ${humanChoice} lose`);
+  } else if (humanChoice > computerChoice) {
     computerChoice += 1;
-    console.log(`${computerChoice} computer win , humanChoice + lose`);
+    console.log(`${humanChoice} computer 'win' , ${computerChoice} + lose`);
+  } else {
+    ((computerChoice = computerChoice), (humanChoice = humanChoice));
   }
 }
 // humen's input
 function getHumanChoice() {
   humanChoice = prompt("enter your answer: ");
   humanChoice = humanChoice.toLowerCase();
-  console.log(`you  have ${humanChoice}`);
+  console.log(`you  have , ${humanChoice}`);
   return humanChoice;
 }
 
@@ -24,7 +25,7 @@ function getComputerChoice() {
   computerChoice = Math.random();
   if (computerChoice < 0.25) console.log("rock");
   else if (0.5 < computerChoice < 0.75) console.log("paper");
-  else console.log(`computer have ,${computerChoice}`);
+  else console.log(`computer has , ${computerChoice}`);
   return computerChoice;
 }
 
