@@ -1,21 +1,28 @@
-function playRound(humanChoice,computerChoice)
-{
-console.log(`computer has , ${computerChoice}`)
-console.log(`you  have , ${humanChoice}`);
-humanChoice = 0;
-computerChoice = 0;
- if (humanSelection = 'rock' && computerSelection == scissors || humanSelection == 'paper' && computerSelection ==  'rock' || humanSelection == 'scissors' && computerSelection == 'paper'){ console.log("YOU WIN")
- 
- humanChoice++;
- };
- else if (computerSelection = 'rock' && humanSelection == scissors || computerSelection == 'paper' && humanSelection ==  'rock' || computerSelection == 'scissors' && humanSelection == 'paper') console.log("YOU lose"){
- computerChoice++};
- else
-  {
-  console.log('it's a tie)
- };
+let humanCounter = 0;
+let computerCounter = 0;
+
+function playRound(humanChoice, computerChoice) {
+  console.log(`computer has - ${computerChoice}`);
+  console.log(`you  have - ${humanChoice}`);
+  if (
+    (humanChoice === "rock" && computerChoice === "scissors") ||
+    (humanChoice === "paper" && computerChoice === "rock") ||
+    (humanChoice === "scissors" && computerChoice === "paper")
+  ) {
+    humanChoice++;
+    console.log("YOU WIN");
+  } else if (
+    (computerChoice === "rock" && humanChoice === "scissors") ||
+    (computerChoice === "paper" && humanChoice === "rock") ||
+    (computerChoice === "scissors" && humanChoice === "paper")
+  ) {
+    computerChoice++;
+    console.log("YOU LOSE");
+  } else {
+    console.log("it's a tie");
+  }
 }
-// humen's input
+// human's input
 function getHumanChoice() {
   humanChoice = prompt("enter your answer: ");
   humanChoice = humanChoice.toLowerCase();
@@ -24,16 +31,13 @@ function getHumanChoice() {
 
 // computer input
 function getComputerChoice() {
-  var computerChoice = Math.random()
-  if (computerChoice < 0.25)  return "rock";
-  else if (0.5 < computerChoice && computerChoice < 0.75)return  "paper";
+  var computerChoice = Math.random();
+  if (computerChoice < 1) return "rock";
+  else if (0.5 < computerChoice && computerChoice < 0.75) return "paper";
   else return "scissors";
-
-
-
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
