@@ -4,7 +4,7 @@
 function getComputerChoice() {
   let computerChoice = Math.random();
 
-  if (computerChoice < 1) {
+  if (computerChoice < 1 / 3) {
     return "rock";
   } else if (0.5 < computerChoice && computerChoice < 0.75) {
     return "paper";
@@ -29,7 +29,7 @@ function getHumanChoice() {
 // Initialize those variables with the value of 0.
 let humanScore = 0;
 let computerScore = 0;
-let counter = 0;
+
 // Create a new function named playRound.
 // Define two parameters for playRound: humanChoice and computerChoice. Use these two parameters to take the human and computer choices as arguments.
 
@@ -42,7 +42,7 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === "scissors" && computerChoice === "paper")
   ) {
     // Increment the humanScore or computerScore variable based on the round winner.
-    humanChoice++;
+    humanScore++;
     console.log("YOU WIN");
   } else if (
     (computerChoice === "rock" && humanChoice === "scissors") ||
@@ -50,7 +50,7 @@ function playRound(humanChoice, computerChoice) {
     (computerChoice === "scissors" && humanChoice === "paper")
   ) {
     // Increment the humanScore or computerScore variable based on the round winner.
-    computerChoice++;
+    computerScore++;
 
     console.log("YOU LOSE");
   } else {
@@ -65,8 +65,21 @@ const computerSelection = getComputerChoice();
 // Play 5 rounds by calling playRound 5 times.
 
 function playGame() {
-  while (counter <= 5) {
+  while (humanScore < 5 && computerScore < 5) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
     playRound(humanSelection, computerSelection);
+
+    console.log(`Score: You ${humanScore} - Computer ${computerScore}`);
+  }
+
+  if (humanScore === 5) {
+    console.log(" You won the game!");
+  } else {
+    console.log(" Computer won the game!");
   }
 }
+
 playGame();
+// playGame ):
