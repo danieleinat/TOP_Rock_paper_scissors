@@ -1,4 +1,30 @@
 // Create a new function named getComputerChoice.
+// getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.
+// computer input
+function getComputerChoice() {
+  let computerChoice = Math.random();
+
+  if (computerChoice < 1 / 3) {
+    return "rock";
+  } else if (computerChoice && computerChoice < 2 / 3) {
+    return "paper";
+  } else {
+    return "scissors";
+  }
+}
+getComputerChoice();
+
+// Create a new function named getHumanChoice.
+// return one of the valid choices depending on what the user inputs.
+// human's input
+// Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations.
+
+function getHumanChoice() {
+  let humanChoice = prompt("enter your answer: ");
+  humanChoice = humanChoice.toLowerCase();
+  return humanChoice;
+}
+
 // Create two new variables named humanScore and computerScore in the global scope.
 // Initialize those variables with the value of 0.
 let humanScore = 0;
@@ -30,9 +56,18 @@ function playRound(humanChoice, computerChoice) {
     console.log("it's a tie");
   }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
 // Create a new function named playGame.
 // Move your playRound function and score variables so that they’re declared inside of the new playGame function
 // Play 5 rounds by calling playRound 5 times.
+
+function playGame() {
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+}
+playGame();
+playGame();
+playGame();
+playGame();
+playGame();
