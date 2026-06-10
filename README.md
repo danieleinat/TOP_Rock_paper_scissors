@@ -1,4 +1,18 @@
-# TOP_Rock_paper_scissors
-A browser (console) implementation of Rock, Paper, Scissors built with HTML and JavaScript for THE ODIN PROJECT(web dev full stack course): Rock Paper Scissors problem.
+# Rock Paper Scissors — The Odin Project
 
+A browser-based Rock, Paper, Scissors game built with JavaScript,
+as part of The Odin Project Foundations course.
 
+## Built With
+
+- HTML
+- JavaScript (DOM manipulation, game logic)
+
+## How It Works
+
+Play against the computer — first to 5 points wins.
+
+## What I Practiced
+
+- Functions, conditionals and game state
+- DOM events and dynamic UI updates
