@@ -6,7 +6,7 @@ as part of The Odin Project Foundations course.
 ## Built With
 
 - HTML
-- JavaScript (DOM manipulation, game logic)
+- JavaScript (game logic)
 
 ## How It Works
 
@@ -15,4 +15,4 @@ Play against the computer — first to 5 points wins.
 ## What I Practiced
 
 - Functions, conditionals and game state
-- DOM events and dynamic UI updates
+
